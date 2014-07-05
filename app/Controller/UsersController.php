@@ -13,4 +13,8 @@ class UsersController extends AppController{
 		}
 
 	}
+	public function profil($id){
+		$user = $this->User->findById($id);
+		$this->set("user",$user);
+	}
 }
