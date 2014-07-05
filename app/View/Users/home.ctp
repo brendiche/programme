@@ -1,0 +1,1 @@
+<a href="/users/index" class="btn">on va voir les gens</a>
