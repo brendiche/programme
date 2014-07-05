@@ -33,7 +33,10 @@ Configure::write('User', array(
 		'f'=>"Femme"),
 		"work_position"=>array(
 		'a'=>"Assis",
-		'd'=>"Debout")
+		'd'=>"Debout"),
+		"morphotype"=>array(
+		'e'=>"Ectomorphe",
+		'm'=>"Mésomorphe")
 		));
 Configure::write('Muscle', array(
 	"nom"=>array(
