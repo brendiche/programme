@@ -30,7 +30,10 @@ Cache::config('default', array('engine' => 'File'));
 Configure::write('User', array(
 		"sex"=>array(
 		'h'=>"Homme",
-		'f'=>"Femme")
+		'f'=>"Femme"),
+		"work_position"=>array(
+		'a'=>"Assis",
+		'd'=>"Debout")
 		));
 Configure::write('Muscle', array(
 	"nom"=>array(
