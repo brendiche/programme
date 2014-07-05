@@ -32,6 +32,15 @@ Configure::write('User', array(
 		'h'=>"Homme",
 		'f'=>"Femme")
 		));
+Configure::write('Muscle', array(
+	"nom"=>array(
+		'd'=>"Dos",
+		'p'=>"Pecs",
+		'j'=>"Jambes",
+		't'=>"Triceps",
+		'b'=>"Biceps",
+		'e'=>"Epaules")
+		));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
