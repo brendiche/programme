@@ -6,6 +6,7 @@
 		<?php echo $title_for_layout; ?>
 	</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
 
