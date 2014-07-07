@@ -4,16 +4,16 @@
  ?>
 <div>
 	<?php if($user["User"]['sex'] == "h"){ ?>
-	Monsieur
+	Monsieur travaille <span style="text-transform:lowercase"><?php echo $wp[$user["User"]["work_position"]]; ?></span>
 	<?php }else{ ?>
-	Madame
+	Madame travaille <span style="text-transform:lowercase"><?php if($user["User"]["work_position"] == "a") echo $wp[$user["User"]["work_position"]]."e";
+	else echo $wp[$user["User"]["work_position"]]; ?></span>
 	<?php } ?>
-	travaille <span style="text-transform:lowercase"><?php echo $wp[$user["User"]["work_position"]]; ?></span>
+	
 </div>
 <div>
 	<?php
-
-     if($user["Programme"]['id']==null){?>
+     if(empty($user["Programme"]['id'])){?>
 	<a href="/programmes/add/<?php echo $user['User']['id'] ?>" class="btn">Petit programme </a>
 	<?php }else{}?>
 </div>
