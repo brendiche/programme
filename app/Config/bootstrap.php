@@ -47,6 +47,34 @@ Configure::write('Muscle', array(
 		'b'=>"Biceps",
 		'e'=>"Epaules")
 		));
+Configure::write('Methode', array(
+	"endurance"=>array(
+		'h_m'=>"4x15",
+		'h_e'=>"4x15"),
+	"volume"=>array(
+		'h_m'=>"5x10",
+		'h_e'=>"4x6"),
+	"pyramidal"=>array(
+		'h_m'=>array("1x10","1x8","1x6","1x4"),
+		'h_e'=>array("1x10","1x8","1x6","1x4")),
+	"force"=>array(
+		'h_m'=>"5x3",
+		'h_e'=>"5x3"),
+	"excentrique"=>array(
+		'h_m'=>"4x5",
+		'h_e'=>"4x5"),
+	"bulgare"=>array(
+		'h_m'=>array("5x2","5x6"),
+		'h_e'=>array("5x2","5x6")),
+	"seche"=>array(
+		'h_m'=>"5x30"),
+	"rafermissement"=>array(
+		'h_m'=>"4x15"),
+	"affinement"=>array(
+		'h_m'=>"4x25"),
+	"profondeur"=>array(
+		'h_m'=>"4x6"),
+		));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
