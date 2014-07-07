@@ -7,7 +7,7 @@ class ExercicesController extends AppController{
 	public function add(){
 		if($this->request->is('post') || $this->request->is('put')){
 			$d = $this->request->data;
-			if($this->Exercice->save($d)) $this->redirect(array("action"=>"index"));
+			if($this->Exercice->save($d)) $this->redirect(array("controler"=>"user","action"=>"home"));
 		}
 
 	}

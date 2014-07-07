@@ -40,6 +40,7 @@ Configure::write('User', array(
 		));
 Configure::write('Muscle', array(
 	"nom"=>array(
+		''=>""
 		'd'=>"Dos",
 		'p'=>"Pecs",
 		'j'=>"Jambes",
@@ -75,6 +76,12 @@ Configure::write('Methode', array(
 	"profondeur"=>array(
 		'h_m'=>"4x6"),
 		));
+configure::write('Type',array(
+	"exercice"=>array(
+		'c'=>"cardio",
+		'e'=>"étirement",
+		'r'=>"renforcement")
+	));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
