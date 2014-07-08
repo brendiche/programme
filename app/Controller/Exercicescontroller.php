@@ -5,9 +5,10 @@ class ExercicesController extends AppController{
 		$this->set('exercices',$exercices);
 	}
 	public function add(){
+		$this->loadModel("User");
 		if($this->request->is('post') || $this->request->is('put')){
 			$d = $this->request->data;
-			if($this->Exercice->save($d)) $this->redirect(array("controler"=>"user","action"=>"home"));
+			if($this->Exercice->save($d)) $this->redirect(array("controller"=>"users","action"=>"home"));
 		}
 
 	}
