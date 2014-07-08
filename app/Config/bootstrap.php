@@ -79,10 +79,11 @@ Configure::write('Methode', array(
 configure::write('Type',array(
 	"exercice"=>array(
 		'c'=>"cardio",
-		'e'=>"étirement",
+		'e'=>"étirements",
+		'a'=>"abdos",
+		'l'=>"lombaires",
 		'r'=>"renforcement")
 	));
-configure::write('Abdo',array("3x15","gainage"));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
