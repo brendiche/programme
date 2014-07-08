@@ -40,7 +40,7 @@ Configure::write('User', array(
 		));
 Configure::write('Muscle', array(
 	"nom"=>array(
-		''=>""
+		''=>"",
 		'd'=>"Dos",
 		'p'=>"Pecs",
 		'j'=>"Jambes",
