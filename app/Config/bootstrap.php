@@ -74,7 +74,7 @@ Configure::write('Methode', array(
 	"affinement"=>array(
 		'h_m'=>"4x25"),
 	"profondeur"=>array(
-		'h_m'=>"4x6"),
+		'h_m'=>"4x6")
 		));
 configure::write('Type',array(
 	"exercice"=>array(
