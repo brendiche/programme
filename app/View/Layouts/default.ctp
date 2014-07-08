@@ -20,6 +20,7 @@
 <body>
 	<div id="container">
 		<div id="header">
+			<a href="/"><?php echo $this->Html->image('/img/home.png',array("height"=>"50px","width"=>"50px")); ?></a>
 		</div>
 		<div id="content">
 
