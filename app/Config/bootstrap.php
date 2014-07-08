@@ -82,6 +82,7 @@ configure::write('Type',array(
 		'e'=>"étirement",
 		'r'=>"renforcement")
 	));
+configure::write('Abdo',array("3x15","gainage"));
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
