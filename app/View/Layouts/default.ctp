@@ -6,12 +6,10 @@
 		<?php echo $title_for_layout; ?>
 	</title>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<script type="text/javascript" src="/js/jquery-2.1.1.min.js"></script>
 	<?php
 		echo $this->Html->meta('icon');
-
-		echo $this->Html->css('cake.generic');
-
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
@@ -20,7 +18,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<a href="/"><?php echo $this->Html->image('/img/home.png',array("height"=>"50px","width"=>"50px")); ?></a>
+			<a href="/"><?php echo $this->Html->image('/img/logo.png',array("width"=>"200px")); ?></a>
 		</div>
 		<div id="content">
 
