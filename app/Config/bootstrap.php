@@ -40,7 +40,8 @@ Configure::write('User', array(
 		));
 Configure::write('Muscle', array(
 	"nom"=>array(
-		''=>"",
+		'a'=>"Abdos",
+		'l'=>"Lombaires",
 		'd'=>"Dos",
 		'p'=>"Pecs",
 		'j'=>"Jambes",
@@ -80,8 +81,6 @@ configure::write('Type',array(
 	"exercice"=>array(
 		'c'=>"cardio",
 		'e'=>"étirements",
-		'a'=>"abdos",
-		'l'=>"lombaires",
 		'r'=>"renforcement")
 	));
 /**
