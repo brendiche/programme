@@ -70,11 +70,11 @@ Configure::write('Methode', array(
 	"seche"=>array(
 		'h_m'=>"5x30"),
 	"rafermissement"=>array(
-		'h_m'=>"4x15"),
+		'f_m'=>"4x15"),
 	"affinement"=>array(
-		'h_m'=>"4x25"),
+		'f_m'=>"4x25"),
 	"profondeur"=>array(
-		'h_m'=>"4x6")
+		'f_m'=>"4x6")
 		));
 configure::write('Type',array(
 	"exercice"=>array(
