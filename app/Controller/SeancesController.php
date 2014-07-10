@@ -3,7 +3,8 @@ class SeancesController extends AppController{
 	public function add($programme_id){
 		$this->loadModel('Exercice');
 		if($this->request->is('post')){
-			
+			debug($this->request->data);
+			die;
 		}else{
 			$cardio = $this->Exercice->find("list",array("conditions"=>array("type"=>"c")));
 			$etirement = $this->Exercice->find("list",array("conditions"=>array("type"=>"e")));
@@ -13,6 +14,7 @@ class SeancesController extends AppController{
 			$renfo_t = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>"t")));
 			$renfo_b = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>"b")));
 			$renfo_e = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>"e")));
+			$abdo = $this->Exercice->find("list",array("conditions"=>array("type"=>"a")));
 			$this->set("cardio",$cardio);
 			$this->set("etirement",$etirement);
 			$this->set("renfo_d",$renfo_d);
@@ -21,6 +23,7 @@ class SeancesController extends AppController{
 			$this->set("renfo_t",$renfo_t);
 			$this->set("renfo_b",$renfo_b);
 			$this->set("renfo_e",$renfo_e);
+			$this->set("abdo",$abdo);
 		}
 	}
 }
