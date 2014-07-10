@@ -83,6 +83,25 @@ configure::write('Type',array(
 		'e'=>"étirements",
 		'r'=>"renforcement")
 	));
+configure::write('Max',array(
+	'rep_charge'=>array(
+	'1'=>"100",
+	'2'=>"100",
+	'3'=>"95",
+	'4'=>"95",
+	'5'=>"90",
+	'6'=>"90",
+	'8'=>"85",
+	'10'=>"80",
+	'15'=>"75",
+	'25'=>"60",
+	'30'=>"55",
+	'ex'=>"120",
+	'bu'=>array("90","60")),
+	));
+
+
+
 /**
  * The settings below can be used to set additional paths to models, views and controllers.
  *
