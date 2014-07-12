@@ -40,7 +40,7 @@
 				echo $this->BootstrapForm->input("ex".($i+1)."_id",array("label"=>false,"type"=>"select","options"=>$renfo)); ?>
 				</div>
 				<?php } ?>
-				<div class="span3 load" id="load<?php echo $i+1; ?>">MAIS GROS CON TU VOIS PAS QUE CA CHARGE</div>
+				<div class="span3 load" id="load<?php echo $i+1; ?>"><?php echo $this->Html->image("/img/load.gif") ?></div>
 		</div>
 <?php } ?>
 <?php
