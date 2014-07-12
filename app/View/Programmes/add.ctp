@@ -1,4 +1,4 @@
-<?php
+<?php 
 	if(!empty($programme["Seance"])){ ?>
 	<div class="row">	
 	<?php	foreach ($programme["Seance"] as $key => $value) { ?>
