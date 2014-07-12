@@ -10,7 +10,7 @@ class ProgrammesController extends AppController{
 				debug($this->Programme->saveAssociated($d));
 				$this->set('programme',$this->Programme->read());
 			}else $this->set('programme',$d);
-			die;
+			
 		}
 	}
 }
