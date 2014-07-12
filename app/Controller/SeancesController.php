@@ -4,7 +4,17 @@ class SeancesController extends AppController{
 		$this->loadModel('Exercice');
 		if($this->request->is('post')){
 			$d= $this->request->data;
-			if($this->Seance->save($d)) $this->redirect(array("controller"=>"programmes","action"=>"add",$programme_id));
+			unset($d["Muscle"]);
+			$exo = array();
+			foreach ($d["Seance"] as $k => $v) {
+				$exo[] = array("exercice_id" => $v);
+			}
+			unset($d["Seance"]);
+			$d["Seance"]["programme_id"] = $programme_id;
+			$d["ExerciceSeance"] = $exo;
+			$this->loadModel("Programme");
+			$user = $this->Programme->findById($programme_id);
+			if($this->Seance->saveAssociated($d)) $this->redirect(array("controller"=>"programmes","action"=>"add",$user["Programme"]["user_id"]));
 		}else{
 			$cardio = $this->Exercice->find("list",array("conditions"=>array("type"=>"c")));
 			$etirement = $this->Exercice->find("list",array("conditions"=>array("type"=>"e")));
@@ -22,5 +32,9 @@ class SeancesController extends AppController{
 		$this->loadModel('Exercice');
 		$renfo = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>$this->params->query["muscle"])));
 		return new CakeResponse(array('body' => json_encode($renfo),'type' => 'json'));
+	}
+	public function test(){
+		debug($this->Seance->find('all'));
+		die;
 	}
 }

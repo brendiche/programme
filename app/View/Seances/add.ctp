@@ -21,7 +21,7 @@
 					elseif ($i == 1)  echo $this->BootstrapForm->input("ex2_id",array("label"=>false,"type"=>"select","options"=>$etirement));
 					elseif ($i == 2) echo $this->BootstrapForm->input("muscle_3",array("label"=>false,"type"=>"select","options"=>$muscle,"disabled"=>"disabled"));
 					elseif ($i == 3) echo $this->BootstrapForm->input("muscle_4",array("label"=>false,"type"=>"select","options"=>$muscle,"value"=>"l","disabled"=>"disabled"));
-					else echo $this->BootstrapForm->input("muscle_".($i+1),array("label"=>false,"type"=>"select","options"=>$muscle,"value"=>"d","class"=>"muscle","id"=>($i+1)));
+					else echo $this->BootstrapForm->input("Muscle.".($i+1),array("label"=>false,"type"=>"select","options"=>$muscle,"value"=>"d","class"=>"muscle","id"=>($i+1)));
 				 ?>
 			</div>
 				<?php if ($i == 2){ ?>
