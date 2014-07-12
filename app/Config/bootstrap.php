@@ -77,13 +77,13 @@ Configure::write('Methode', array(
 	"profondeur"=>array(
 		'f_m'=>"4x6")
 		));
-configure::write('Type',array(
+Configure::write('Type',array(
 	"exercice"=>array(
 		'c'=>"cardio",
 		'e'=>"étirements",
 		'r'=>"renforcement")
 	));
-configure::write('Max',array(
+Configure::write('Max',array(
 	'rep_charge'=>array(
 		'1'=>"100",
 		'2'=>"100",

@@ -32,7 +32,7 @@
 				<?php }elseif ($i == 3){ ?>
 				<div class="span3 deux" id="deux_<?php echo $i; ?>">
 				<?php
-				echo $this->BootstrapForm->input("ex4_id",array("label"=>false,"type"=>"select","options"=>$muscle)); ?>
+				echo $this->BootstrapForm->input("ex4_id",array("label"=>false,"type"=>"select","options"=>$lombaires)); ?>
 				</div>		
 				<?php } elseif($i > 3){ ?>
 				<div class="span3 deux" id="deux_<?php echo $i; ?>">
@@ -40,7 +40,7 @@
 				echo $this->BootstrapForm->input("ex".($i+1)."_id",array("label"=>false,"type"=>"select","options"=>$renfo)); ?>
 				</div>
 				<?php } ?>
-				<div class="span3 load" id="load<?php echo $i+1; ?>">MAIS GROS CON TU VOIS AS QUE CA CHARGE</div>
+				<div class="span3 load" id="load<?php echo $i+1; ?>">MAIS GROS CON TU VOIS PAS QUE CA CHARGE</div>
 		</div>
 <?php } ?>
 <?php

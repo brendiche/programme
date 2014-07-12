@@ -9,10 +9,12 @@ class SeancesController extends AppController{
 			$cardio = $this->Exercice->find("list",array("conditions"=>array("type"=>"c")));
 			$etirement = $this->Exercice->find("list",array("conditions"=>array("type"=>"e")));
 			$abdo = $this->Exercice->find("list",array("conditions"=>array("type"=>"a")));
+			$lombaires = $this->Exercice->find("list",array("conditions"=>array("muscles"=>"l")));
 			$renfo = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>"d")));
 			$this->set("cardio",$cardio);
 			$this->set("etirement",$etirement);
 			$this->set("abdo",$abdo);
+			$this->set("lombaires",$lombaires);
 			$this->set("renfo",$renfo);
 		}
 	}
