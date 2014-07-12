@@ -1,1 +1,8 @@
-<a href="/seances/add/<?php echo $programme["Programme"]["id"]; ?>" class="btn">nouveau programme</a>
+<?php
+ if(!empty($programme["Seance"])){
+ 	
+}   
+?>
+
+<a href="/seances/add/<?php echo $programme["Programme"]["id"]; ?>" class="btn">nouvelle séance</a>
+

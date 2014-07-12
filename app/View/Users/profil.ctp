@@ -12,8 +12,5 @@
 	
 </div>
 <div>
-	<?php
-     if(empty($user["Programme"]['id'])){?>
 	<a href="/programmes/add/<?php echo $user['User']['id'] ?>" class="btn">Petit programme </a>
-	<?php }else{}?>
 </div>
