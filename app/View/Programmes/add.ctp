@@ -11,6 +11,7 @@
 		</div>
 	<?php } ?>
 	</div>
+	<a href="/seances/calcul_max/<?php echo $value["id"] ?>" class="btn">Calculer les max</a>
 	<?php }
 ?>
 <br><br>
