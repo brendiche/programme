@@ -98,8 +98,10 @@ Configure::write('Max',array(
 		'30'=>"55",
 		'ex'=>"120",
 		'bu'=>array("90","60")),
+	'brzycki'=>array(
+		'val1'=>"1,0278",
+		'val2'=>"0,0278")
 	));
-
 
 
 /**
