@@ -480,7 +480,7 @@ class Model extends Object implements CakeEventListener {
  * @var array
  * @link http://book.cakephp.org/2.0/en/models/behaviors.html#using-behaviors
  */
-	public $actsAs = null;
+	public $actsAs = array('Containable');
 
 /**
  * Holds the Behavior objects currently bound to this model.
