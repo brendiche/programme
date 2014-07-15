@@ -35,7 +35,7 @@ class SeancesController extends AppController{
 	}
 	public function calcul_max(){
 		$seance = $this->Seance->find("first",array("conditions"=>array("id" => $this->params->query["seance_id"]),"contain"=>array("ExerciceSeance"=>"Exercice")));
-		debug($seance);
-		die;
+		if(!empty($seance)) return new CakeResponse(array('body' => json_encode($seance),'type' => 'json'));  
+        else return new CakeResponse(array('body' => "false",'type' => 'json'));  
 	}
 }

@@ -27,6 +27,11 @@ $(".calcul-max").click(function(){
 	var dataType = 'json'; 
 	var data ={"seance_id" : $(this).attr("Seance")};
 	$.get(url,data,function(e){
+		for (var i = 0; i < 5; i++) {
+			console.log(e.ExerciceSeance[i+4].Exercice.name);
+			console.log($("#max_"+i));
+			$("#max_"+i).append(e.ExerciceSeance[i+4].Exercice.name);
+		};
 		$("#max").dialog( "open" );
 	},dataType);
     });
