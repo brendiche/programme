@@ -57,8 +57,8 @@ $(document).ready(function(){
 		var id = $(this).attr("id");
 		$("#load"+id).show();
 		var muscle = $(this).val();
-		var url = "/seances/get_exo"
-		var dataType = 'json' 
+		var url = "/seances/get_exo";
+		var dataType = 'json'; 
 		var data ={"muscle" : muscle};
 		$.get(url,data,function(e){
 			$("#SeanceEx"+id+"Id").html("");

@@ -33,8 +33,8 @@ class SeancesController extends AppController{
 		$renfo = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>$this->params->query["muscle"])));
 		return new CakeResponse(array('body' => json_encode($renfo),'type' => 'json'));
 	}
-	public function calcul_max($id){
-		$seance = $this->Seance->find('first',array("conditions"=>array("id"=>$id),'contain'=>array("ExerciceSeance"=>"Exercice")));
+	public function calcul_max(){
+		$seance = $this->Seance->find("first",array("conditions"=>array("id" => $this->params->query["seance_id"]),"contain"=>array("ExerciceSeance"=>"Exercice")));
 		debug($seance);
 		die;
 	}

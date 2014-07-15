@@ -1,5 +1,5 @@
-<script type="text/javascript" src="/js/ui/jquery-ui.js"></script>
-<link rel="stylesheet" type="text/css" href="/css/ui/jquery-ui.css">
+<script type="text/javascript" src="/js/ui/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/ui/jquery-ui.min.css">
 <?php 
 	if(!empty($programme["Seance"])){ ?>
 	<div class="row">	
@@ -22,7 +22,12 @@
 <?php  echo $this->element('max'); ?>
  <script type="text/javascript">
 $("#max").dialog({ autoOpen: false,modal: true });
-$( ".calcul-max" ).button().on( "click", function() {
-      $("#max").dialog( "open" );
+$(".calcul-max").click(function(){
+	var url = "/seances/calcul_max";
+	var dataType = 'json'; 
+	var data ={"seance_id" : $(this).attr("Seance")};
+	$.get(url,data,function(e){
+		$("#max").dialog( "open" );
+	},dataType);
     });
  </script>
