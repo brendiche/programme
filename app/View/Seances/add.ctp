@@ -18,7 +18,10 @@
 			<div class="span3" id="un_<?php echo $i; ?>">
 				<?php 
 					if($i == 0 ) echo $this->BootstrapForm->input("ex1_id",array("label"=>false,"type"=>"select","options"=>$cardio));
-					elseif ($i == 1)  echo $this->BootstrapForm->input("ex2_id",array("label"=>false,"type"=>"select","options"=>$etirement));
+				elseif ($i == 1){
+					if($default_stretch == 'd') echo $this->BootstrapForm->input("ex2_id",array("label"=>false,"type"=>"select","options"=>$etirement,"value"=>7));
+					else echo $this->BootstrapForm->input("ex2_id",array("label"=>false,"type"=>"select","options"=>$etirement,"value"=>6));
+						}
 					elseif ($i == 2) echo $this->BootstrapForm->input("muscle_3",array("label"=>false,"type"=>"select","options"=>$muscle,"disabled"=>"disabled"));
 					elseif ($i == 3) echo $this->BootstrapForm->input("muscle_4",array("label"=>false,"type"=>"select","options"=>$muscle,"value"=>"l","disabled"=>"disabled"));
 					else echo $this->BootstrapForm->input("Muscle.".($i+1),array("label"=>false,"type"=>"select","options"=>$muscle,"value"=>"d","class"=>"muscle","id"=>($i+1)));
