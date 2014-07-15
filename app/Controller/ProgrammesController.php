@@ -6,8 +6,7 @@ class ProgrammesController extends AppController{
 										"contain"=>array("Seance"=>array("ExerciceSeance"=>"Exercice"),"User")));
 			if(empty($d)){
 				$d = array("Programme"=>array("user_id"=>$user_id),"User"=>array("id"=>$user_id));
-				debug($d);
-				debug($this->Programme->saveAssociated($d));
+				$this->Programme->saveAssociated($d);
 				$this->set('programme',$this->Programme->read());
 			}else $this->set('programme',$d);
 			
