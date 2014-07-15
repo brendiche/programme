@@ -1,4 +1,4 @@
-<h1>C'est le profile de <?php echo $user["User"]['name']." ".$user["User"]["last_name"]; ?></h1>
+<h1>C'est le profil de <?php echo $user["User"]['name']." ".$user["User"]["last_name"]; ?></h1>
 <?php
 	 $wp = Configure::read("User.work_position");
  ?>
