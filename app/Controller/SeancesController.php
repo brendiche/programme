@@ -2,6 +2,7 @@
 class SeancesController extends AppController{
 	public function add($programme_id){
 		$this->loadModel('Exercice');
+		$this->loadModel("Programme");
 		if($this->request->is('post')){
 			$d= $this->request->data;
 			unset($d["Muscle"]);
@@ -12,7 +13,6 @@ class SeancesController extends AppController{
 			unset($d["Seance"]);
 			$d["Seance"]["programme_id"] = $programme_id;
 			$d["ExerciceSeance"] = $exo;
-			$this->loadModel("Programme");
 			$user = $this->Programme->findById($programme_id);
 			if($this->Seance->saveAssociated($d)) $this->redirect(array("controller"=>"programmes","action"=>"add",$user["Programme"]["user_id"]));
 		}else{
@@ -21,6 +21,8 @@ class SeancesController extends AppController{
 			$abdo = $this->Exercice->find("list",array("conditions"=>array("type"=>"a")));
 			$lombaires = $this->Exercice->find("list",array("conditions"=>array("muscles"=>"l")));
 			$renfo = $this->Exercice->find("list",array("conditions"=>array("type"=>"r","muscles"=>"d")));
+			$work_position = $this->Programme->findById($programme_id);
+			$this->set("default_stretch",$work_position["User"]["work_position"]);
 			$this->set("cardio",$cardio);
 			$this->set("etirement",$etirement);
 			$this->set("abdo",$abdo);
