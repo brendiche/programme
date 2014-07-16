@@ -36,8 +36,15 @@ class SeancesController extends AppController{
 		return new CakeResponse(array('body' => json_encode($renfo),'type' => 'json'));
 	}
 	public function calcul_max(){
-		$seance = $this->Seance->find("first",array("conditions"=>array("id" => $this->params->query["seance_id"]),"contain"=>array("ExerciceSeance"=>"Exercice")));
+		if($this->request->is('ajax')){
+			$seance = $this->Seance->find("first",array("conditions"=>array("id" => $this->params->query["seance_id"]),"contain"=>array("ExerciceSeance"=>"Exercice")));
 		if(!empty($seance)) return new CakeResponse(array('body' => json_encode($seance),'type' => 'json'));  
         else return new CakeResponse(array('body' => "false",'type' => 'json'));  
+		}
+
+		if($this->request->is('post')){
+			debug("Vas voir allieur si j'y suis par ce que tu me casses les coullies et que je te pisse à la raie");
+			die;
+		}
 	}
 }
