@@ -7,7 +7,7 @@
 		echo $this->BootstrapForm->input('max'.$i,array("label"=>false));
 	}
 
-	echo $this->BootstrapForm->submit("Grosse pute");
+	echo $this->BootstrapForm->submit("Sauvegarder les maxs");
 	echo $this->BootstrapForm->end();
 	 ?>
 </div>
