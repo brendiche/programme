@@ -43,7 +43,7 @@ class SeancesController extends AppController{
 		}
 
 		if($this->request->is('post')){
-			debug("Vas voir allieur si j'y suis par ce que tu me casses les coullies et que je te pisse à la raie");
+			debug("c'est presque fini");
 			die;
 		}
 	}
