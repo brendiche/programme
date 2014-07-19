@@ -1,5 +1,5 @@
 <?php
 class SettingsController extends AppController{
-	public function home(){
+	public function settings(){
 	}
 }
