@@ -19,7 +19,7 @@
 	<div id="container">
 		<div id="header">
 			<a href="/"><?php echo $this->Html->image('/img/logo.png',array("width"=>"200px")); ?></a>
-			<a href="/settings/settings"><?php echo $this->Html->image('/img/réglages.png',array("width"=>"40px")); ?></a>
+			<a href="/settings/settings" class="btn"><?php echo $this->Html->image('/img/réglages.png',array("width"=>"40px")); ?></a>
 		</div>
 		<div id="content">
 
