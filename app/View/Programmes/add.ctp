@@ -21,16 +21,16 @@
 <?php ///seances/calcul_max/<?php echo $value["id"] ?>
 <?php  echo $this->element('max'); ?>
  <script type="text/javascript">
-$("#max").dialog({ autoOpen: false,modal: true });
+$("#max").dialog({ autoOpen: false,modal: true,draggable: false,width: 500});
 $(".calcul-max").click(function(){
 	var url = "/seances/calcul_max";
 	var dataType = 'json'; 
 	var data ={"seance_id" : $(this).attr("Seance")};
 	$.get(url,data,function(e){
+		$("#seanceSeanceId").val(e.Seance.id);
 		for (var i = 0; i < 5; i++) {
-			console.log(e.ExerciceSeance[i+4].Exercice.name);
-			console.log($("#max_"+i));
-			$("#max_"+i).append(e.ExerciceSeance[i+4].Exercice.name);
+			$("#max_"+i).html(e.ExerciceSeance[i+4].Exercice.name);
+			$("#seanceExoId"+i).val(e.ExerciceSeance[i+4].Exercice.id);
 		};
 		$("#max").dialog( "open" );
 	},dataType);

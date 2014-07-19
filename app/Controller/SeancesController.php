@@ -43,7 +43,8 @@ class SeancesController extends AppController{
 		}
 
 		if($this->request->is('post')){
-			debug("c'est presque fini");
+			$d = $this->request->data;
+			debug($d);
 			die;
 		}
 	}
