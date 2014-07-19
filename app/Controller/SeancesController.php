@@ -52,6 +52,7 @@ class SeancesController extends AppController{
 				$to_save["ExerciceSeance"][$k+4]["1rm"] = $max;
 				$to_save["ExerciceSeance"][$k+4]["charge"] = $v["max_charge"];
 				$to_save["ExerciceSeance"][$k+4]["nb_reps"] = $v["max_rep"];
+				$to_save["Seance"]["max"] = 1 ;
 			}
 			if($this->Seance->saveAssociated($to_save)) $this->redirect(array("controller"=>"programmes","action"=>"add",$user["Programme"]["user_id"]));
 
@@ -59,6 +60,6 @@ class SeancesController extends AppController{
 	}
 	public function getMax($charge,$rep){
 		$val = Configure::read("Max.brzycki");
-		return $charge/($val['val1']-($val['val2']*$rep));
+		return ($charge/($val['val1']-($val['val2']*$rep)));
 	}
 }

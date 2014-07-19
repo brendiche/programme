@@ -8,7 +8,11 @@
 		Séance : <?php echo ($key+1)?>
 		<br>
 		<?php	foreach ($value["ExerciceSeance"] as $k => $v) {
-				echo $v["Exercice"]["name"]."<br>";
+				echo $v["Exercice"]["name"];
+				if ($value["max"] == 1 && $k > 3) {
+					echo ": ".$v["1rm"];
+				}
+				echo "<br>";
 			} ?>
 		<a href="#" class="btn calcul-max" Seance="<?php echo $value['id']?>">Calculer les max</a>	
 		</div>
