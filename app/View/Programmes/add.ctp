@@ -30,7 +30,6 @@ $(".calcul-max").click(function(){
 		$("#seanceSeanceId").val(e.Seance.id);
 		for (var i = 0; i < 5; i++) {
 			$("#max_"+i).html(e.ExerciceSeance[i+4].Exercice.name);
-			$("#seanceExoId"+i).val(e.ExerciceSeance[i+4].Exercice.id);
 		};
 		$("#max").dialog( "open" );
 	},dataType);

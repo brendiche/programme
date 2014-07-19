@@ -9,9 +9,8 @@
 		<div class="span6">Répétitions</div>
 	</div>
 	<?php
-		echo $this->BootstrapForm->input("exo_id_".$i,array("type"=>"hidden"));
-		echo $this->BootstrapForm->input('max_charge'.$i,array("label"=>false,'div'=>false)); 
-		echo $this->BootstrapForm->input('max_rep'.$i,array("label"=>false,'div'=>false)); 
+		echo $this->BootstrapForm->input('Exo.'.$i.'.max_charge',array("label"=>false,'div'=>false)); 
+		echo $this->BootstrapForm->input('Exo.'.$i.'.max_rep',array("label"=>false,'div'=>false)); 
 	
 	 } 
 
