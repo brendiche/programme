@@ -1,0 +1,1 @@
+<a href="/exercices/add" class="btn">Nouvel exercice</a>
