@@ -14,7 +14,10 @@
 				}
 				echo "<br>";
 			} ?>
-		<a href="#" class="btn calcul-max" Seance="<?php echo $value['id']?>">Calculer les max</a>	
+		<a href="#" class="btn calcul-max" Seance="<?php echo $value['id']?>">Calculer les max</a>
+		<?php if ($v["1rm"] != 0){ ?>
+			<a href="" class="btn">sauvegarder les max</a>	
+		<?php } ?>
 		</div>
 	<?php } ?>
 	</div>
@@ -22,8 +25,9 @@
 ?>
 <br><br>
 <a href="/seances/add/<?php echo $programme["Programme"]["id"]; ?>" class="btn">nouvelle séance</a>
-<?php ///seances/calcul_max/<?php echo $value["id"] ?>
 <?php  echo $this->element('max'); ?>
+
+
  <script type="text/javascript">
 $("#max").dialog({ autoOpen: false,modal: true,draggable: false,width: 500});
 $(".calcul-max").click(function(){
