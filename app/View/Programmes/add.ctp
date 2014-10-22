@@ -10,7 +10,7 @@
 		<?php	foreach ($value["ExerciceSeance"] as $k => $v) {
 				echo $v["Exercice"]["name"];
 				if ($value["max"] == 1 && $k > 3) {
-					echo ": ".$v["1rm"];
+					echo ": ".$v["1rm"]." kg";
 				}
 				echo "<br>";
 			} ?>
@@ -25,6 +25,9 @@
 ?>
 <br><br>
 <a href="/seances/add/<?php echo $programme["Programme"]["id"]; ?>" class="btn">nouvelle séance</a>
+<a href="#" class="btn" id="create" prog="<?php echo $programme["Programme"]["id"]; ?>">création du programme</a>
+<br><br>
+
 <?php  echo $this->element('max'); ?>
 
 
@@ -40,6 +43,15 @@ $(".calcul-max").click(function(){
 			$("#max_"+i).html(e.ExerciceSeance[i+4].Exercice.name);
 		};
 		$("#max").dialog( "open" );
+	},dataType);
+    });
+$("#create").click(function(){
+	var url = "/programmes/create";
+	var dataType = 'json'; 
+	var data ={"prog_id" : $(this).attr("prog")};
+	$.get(url,data,function(e){
+		console.log(e);
+		alert("ta mere");
 	},dataType);
     });
  </script>
